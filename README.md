@@ -37,4 +37,8 @@ For deployment you currently need a file `clojurians-martinklepsch-com.confetti.
 boot production fetch-rooms deploy
 ```
 
-**Note:** a deployment of the site can be found at https://d3981087m4idf6.cloudfront.net
+**Note:** a deployment of the site can be found at https://d3981087m4idf6.cloudfront.net. You can use the following command to get a Matrix directory server compatible list of all rooms in the directory:
+
+```
+curl http://d3981087m4idf6.cloudfront.net/_matrix/client/r0/publicRooms
+```
