@@ -12,6 +12,16 @@ Clojurians Slack community.
 
 Currently we're faking being a real Matrix home server and just implement the `publicRooms` directory server endpoint by serving a static file at the right location.
 
+#### Adding a Room to the Directory
+
+1. Invite an admin
+2. Make sure the room matches all criteria
+3. Submit a pull request which adds a map with at least the following fields to `resources/rooms.edn`
+
+        {:matrix/internal-id "!gWEkPbprAwBHgNtVcH:matrix.org"
+         :matrix/room-type :matrix/native}
+
+
 #### How to run
 
 ```
