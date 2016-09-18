@@ -1,10 +1,10 @@
-## clojurians-matrix
+# clojurians-matrix
 
 These repo is exploring the potential for a discovery site,
 application and [Matrix](https://matrix.org) directory server for
 Clojurians Slack community.
 
-#### Goals
+### Goals
 
 - provide infrastructure to maintain a list of rooms that are vetted by a set of administrators
 - provide a web ui to browse & "discover" these rooms rooms
@@ -12,7 +12,7 @@ Clojurians Slack community.
 
 Currently we're faking being a real Matrix home server and just implement the `publicRooms` directory server endpoint by serving a static file at the right location.
 
-#### Adding a Room to the Directory
+### Adding a Room to the Directory
 
 1. Invite an admin
 2. Make sure the room matches all criteria
@@ -22,14 +22,14 @@ Currently we're faking being a real Matrix home server and just implement the `p
          :matrix/room-type :matrix/native}
 
 
-#### How to run
+### How to run
 
 ```
 boot fetch-rooms dev                  ; development mode
 boot production fetch-rooms watch run ; production mode
 ```
 
-#### Deploying
+### Deploying
 
 For deployment you currently need a file `clojurians-martinklepsch-com.confetti.edn` that contains AWS credentials and the name of an S3 bucket to push to. (See `deploy` for details.)
 
