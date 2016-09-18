@@ -10,6 +10,8 @@ Clojurians Slack community.
 - provide a web ui to browse & "discover" these rooms rooms
 - provide a Matrix [directory server endpoint](https://matrix.org/docs/api/client-server/#!/Room_discovery/get_matrix_client_r0_publicRooms) that can be used by clients to provide different sets of rooms to users
 
+Currently we're faking being a real Matrix home server and just implement the `publicRooms` directory server endpoint by serving a static file at the right location.
+
 #### How to run
 
 ```
