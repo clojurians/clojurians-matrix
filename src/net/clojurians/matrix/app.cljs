@@ -1,6 +1,5 @@
 (ns net.clojurians.matrix.app
-  (:require [net.clojurians.matrix.rooms :as rooms]
-            [goog.net.XhrIo :as xhr]
+  (:require [goog.net.XhrIo :as xhr]
             [goog.string :as gstring]
             [clojure.string :as string]
             [rum.core :as rum]))
