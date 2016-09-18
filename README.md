@@ -1,8 +1,8 @@
 ## clojurians-matrix
 
 These repo is exploring the potential for a discovery site,
-application and Matrix directory server for Clojurians Slack
-community.
+application and [Matrix](https://matrix.org) directory server for
+Clojurians Slack community.
 
 #### Goals
 
@@ -14,7 +14,7 @@ community.
 
 ```
 boot fetch-rooms dev                  ; development mode
-boot fetch-rooms production watch run ; production mode
+boot production fetch-rooms watch run ; production mode
 ```
 
 #### Deploying
