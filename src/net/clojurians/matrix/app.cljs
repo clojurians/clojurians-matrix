@@ -1,4 +1,4 @@
-(ns clojurians-matrix.app
+(ns net.clojurians.matrix.app
     (:require [rum.core :as rum]))
 
 (rum/defc label [text]

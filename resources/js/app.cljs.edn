@@ -1,3 +1,0 @@
-{:require  [clojurians-matrix.app]
- :init-fns [clojurians-matrix.app/init]
- :compiler-options {:asset-path "js/app.out"}}

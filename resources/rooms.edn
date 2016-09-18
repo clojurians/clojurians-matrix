@@ -14,8 +14,14 @@
   :matrix/room-type :matrix/native
   :clojurians.room/name "Clojure Community"}
 
+ {:matrix/local-address " #clojure-vienna:matrix.org"
+  :matrix/internal-id "!gWEkPbprAwBHgNtVcH:matrix.org"
+  :matrix/room-type :matrix/native
+  :clojurians.room/name "Clojure Vienna"}
+
  {:matrix/local-address "#freenode_#clojure:matrix.org"
   :matrix/internal-id "!HwdJxzcqVqGahvmXHs:matrix.org"
   :matrix/room-type :matrix.bridge/irc
   :clojurians.room/name "Clojure"}
+
  ]

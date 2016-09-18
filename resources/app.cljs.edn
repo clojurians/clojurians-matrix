@@ -1,0 +1,4 @@
+{:require  [net.clojurians.matrix.app]
+ :init-fns [net.clojurians.matrix.app/init]
+ ;; :compiler-options {:asset-path "app.out"}
+ }
