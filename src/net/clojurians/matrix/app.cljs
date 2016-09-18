@@ -1,6 +1,7 @@
 (ns net.clojurians.matrix.app
   (:require [goog.net.XhrIo :as xhr]
             [goog.string :as gstring]
+            [goog.object :as gobj]
             [clojure.string :as string]
             [rum.core :as rum]))
 
@@ -9,7 +10,7 @@
 (xhr/send "rooms.json"
           (fn [r]
             (let [json (.getResponseJson (.-target r))]
-              (swap! app-state assoc :rooms (js->clj (.-chunk json) :keywordize-keys true)))))
+              (swap! app-state assoc :rooms (js->clj (gobj/get json "chunk") :keywordize-keys true)))))
 
 (defn room-name [room-data]
   (or (:name room-data)
