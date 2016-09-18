@@ -36,13 +36,16 @@
                     :chunk)
           our-rooms (filter (comp our? :room_id) rooms)
           dir      (tmp-dir!)
-          ;; tgt-file (io/file dir "_matrix" "client" "r0" "publicRooms") ; perhaps for api
+          ds-file  (io/file dir "_matrix" "client" "r0" "publicRooms") ; perhaps for api
           tgt-file (io/file dir "rooms.json")
+          json-str (json/write-str {:chunk our-rooms})
+
           ]
       (util/info "Downloaded info for %s rooms\n" (count rooms))
       (util/info "%s rooms found out of %s provided via rooms.edn\n" (count our-rooms) (count our?))
       (io/make-parents tgt-file)
-      (spit tgt-file (json/write-str {:chunk our-rooms}))
+      (spit tgt-file json-str)
+      (spit ds-file json-str)
       (-> fs (add-resource dir) commit!))))
 
 (deftask build []
