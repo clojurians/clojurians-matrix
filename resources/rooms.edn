@@ -1,0 +1,21 @@
+[
+ {:matrix/local-address "#clojurescript:matrix.org"
+  :matrix/internal-id "!LOwFQWBsILWVcszfWb:matrix.org"
+  :matrix/room-type :matrix/native
+  :clojurians.room/name "ClojureScript"}
+
+ {:matrix/local-address "#clojure:matrix.org"
+  :matrix/internal-id "!GXJpdJEwxAgOTnmxPa:matrix.org"
+  :matrix/room-type :matrix/native
+  :clojurians.room/name "Clojure"}
+
+ {:matrix/local-address "#clojure-community:matrix.org"
+  :matrix/internal-id "!jLvInSoGQrZDRhWtNq:matrix.org"
+  :matrix/room-type :matrix/native
+  :clojurians.room/name "Clojure Community"}
+
+ {:matrix/local-address "#freenode_#clojure:matrix.org"
+  :matrix/internal-id "!HwdJxzcqVqGahvmXHs:matrix.org"
+  :matrix/room-type :matrix.bridge/irc
+  :clojurians.room/name "Clojure"}
+ ]
