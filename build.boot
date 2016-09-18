@@ -45,6 +45,7 @@
       (util/info "%s rooms found out of %s provided via rooms.edn\n" (count our-rooms) (count our?))
       (io/make-parents tgt-file)
       (spit tgt-file json-str)
+      (io/make-parents ds-file)
       (spit ds-file json-str)
       (-> fs (add-resource dir) commit!))))
 
@@ -83,9 +84,8 @@
   (deftask deploy []
     (comp
      (build)
-     (show :fileset true)
-     (sift :include #{#"^app\.js$" #"^app\.css$" #"^index\.html$" #"^rooms\.json$"})
-     (show :fileset true)
+     (sift :include #{#"^app\.js$" #"^app\.css$" #"^index\.html$" #"^rooms\.json$"
+                      #"^_matrix\/client\/r0\/publicRooms$"})
      (sync-bucket :bucket (:bucket-name confetti-edn)
                   :prune true
                   :cloudfront-id (:cloudfront-id confetti-edn)
