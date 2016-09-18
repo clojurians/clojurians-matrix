@@ -13,7 +13,8 @@ community.
 #### How to run
 
 ```
-boot fetch-rooms dev
+boot fetch-rooms dev                  ; development mode
+boot fetch-rooms production watch run ; production mode
 ```
 
 #### Deploying
