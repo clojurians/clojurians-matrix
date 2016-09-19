@@ -19,6 +19,16 @@
   :matrix/room-type :matrix/native
   :clojurians.room/name "Clojure Vienna"}
 
+ {:matrix/local-address " #cljsrn:matrix.org"
+  :matrix/internal-id "!JkMrQnKTfotvhViLlq:matrix.org"
+  :matrix/room-type :matrix/native
+  :clojurians.room/name "ReactNative + ClojureScript"}
+
+ {:matrix/local-address " #boot-clj:matrix.org"
+  :matrix/internal-id "!iRoWAhLPAIVgDsLVCj:matrix.org"
+  :matrix/room-type :matrix/native
+  :clojurians.room/name "Boot"}
+
  {:matrix/local-address "#freenode_#clojure:matrix.org"
   :matrix/internal-id "!HwdJxzcqVqGahvmXHs:matrix.org"
   :matrix/room-type :matrix.bridge/irc
