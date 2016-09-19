@@ -88,14 +88,25 @@
      :placeholder "Search existing rooms..."}]])
 
 (rum/defc footer []
-  [:div.pa4.pv5.mid-gray.bt.b--black-20
-   [:a.link.b.f3.f2-ns.dim.black-70.lh-solid {:href "http://clojurians.net"} "clojurians.net"]
-   [:p.f6.db.lh-solid "An inclusive community for people interested in functional programming and Clojure/Script."]
+  [:div.pa4.pt6.mid-gray.lh-copy
+
+   [:h3 "What is this?"]
+   [:p "This is an experimental site to explore how the Clojurians community could use "
+    [:a.link.blue {:href "https://matrix.org"} "matrix.org"] " and " [:a.link.blue {:href "https://riot.im"} "riot.im"]
+    " for their communications needs."]
+
+   [:p "The Clojurians Slack community is still going strong and you can join it over at "
+    [:a.link.blue {:href "http://clojurians.net"} "clojurians.net"]]
+
+   [:h3 "The Goal"]
+   [:p "An inclusive community for people interested in functional programming and Clojure/Script."]
+
+   [:p [:a.link.blue {:href "https://github.com/martinklepsch/clojurians-matrix"} "Source"]]
 
    [:div.mt5
-    [:a.f6.dib.pr2.mid-gray.dim {:href "/code-of-conduct/" :title "Code of Conduct"} "Code of Conduct"]
-    [:a.f6.dib.pr2.mid-gray.dim {:href "/about/" :title "About"} "About"]
-    [:a.f6.dib.pr2.mid-gray.dim {:href "/contact/" :title "Contact"} "Contact"]]])
+    [:a.f6.dib.pr2.mid-gray.dim {:href "#" :title "Code of Conduct"} "Code of Conduct"]
+    [:a.f6.dib.pr2.mid-gray.dim {:href "#" :title "About"} "About"]
+    [:a.f6.dib.pr2.mid-gray.dim {:href "#" :title "Contact"} "Contact"]]])
 
 (rum/defc app []
   [:div.cf
