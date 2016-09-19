@@ -2,22 +2,26 @@
  :source-paths    #{"src"}
  :resource-paths  #{"resources"}
  :dependencies '[[adzerk/boot-cljs          "1.7.228-1"  :scope "test"]
-                 [adzerk/boot-cljs-repl     "0.3.0"      :scope "test"]
-                 [adzerk/boot-reload        "0.4.8"      :scope "test"]
-                 [pandeiro/boot-http        "0.7.2"      :scope "test"]
+                 [adzerk/boot-cljs-repl     "0.3.3"      :scope "test"]
+                 [adzerk/boot-reload        "0.4.12"      :scope "test"]
+                 [pandeiro/boot-http        "0.7.3"      :scope "test"]
                  [deraen/boot-sass          "0.2.1"      :scope "test"]
                  [com.cemerick/piggieback   "0.2.1"      :scope "test"]
                  [org.clojure/tools.nrepl   "0.2.12"     :scope "test"]
                  [weasel                    "0.7.0"      :scope "test"]
                  [confetti/confetti   "0.1.2-SNAPSHOT"   :scope "test"]
-                 [org.clojure/clojurescript "1.7.228"]
-                 [rum "0.10.4"]])
+                 [binaryage/devtools        "0.8.0"      :scope "test"]
+                 [binaryage/dirac           "0.6.3"      :scope "test"]
+                 [powerlaces/boot-cljs-devtools "0.1.1"  :scope "test"]
+                 [org.clojure/clojurescript "1.9.229"]
+                 [rum "0.10.6"]])
 
 (require
  '[adzerk.boot-cljs      :refer [cljs]]
- '[deraen.boot-sass      :refer [sass]]
- '[adzerk.boot-cljs-repl :refer [cljs-repl start-repl]]
  '[adzerk.boot-reload    :refer [reload]]
+ '[adzerk.boot-cljs-repl :refer [cljs-repl start-repl]]
+ '[powerlaces.boot-cljs-devtools :refer [cljs-devtools]]
+ '[deraen.boot-sass      :refer [sass]]
  '[pandeiro.boot-http    :refer [serve]]
  '[confetti.boot-confetti :refer [sync-bucket create-site]]
  '[boot.util :as util]
@@ -59,6 +63,7 @@
         (watch)
         (cljs-repl)
         (reload)
+        (cljs-devtools)
         (build)))
 
 (deftask production []
