@@ -36,7 +36,7 @@
 
 (defn avatar [mxc-uri]
   (let [size 56]
-    [:img.br-100.pa1.ba.b--black-20.h3.w3
+    [:img.br-100.pa1.ba.b--black-20.h3.w3.border-box
      {:src (if mxc-uri
              (str "https://matrix.org/_matrix/media/v1/thumbnail/"
                   (string/replace mxc-uri #"^mxc://" "")
@@ -45,7 +45,7 @@
 
 (rum/defc room < rum/static [room-data]
   [:div.pa3.dt
-   [:div.dtc.v-mid.tc.w3.border-box
+   [:div.dtc.v-mid.tc.w3
     (avatar (:avatar_url room-data))
     [:a.db.link.blue.ttu.dim.f6.b.mt2 {:href (join-uri (:room_id room-data))} "Join"]]
    [:div.dtc.v-mid.pl4

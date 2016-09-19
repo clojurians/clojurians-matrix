@@ -42,9 +42,7 @@
           dir      (tmp-dir!)
           ds-file  (io/file dir "_matrix" "client" "r0" "publicRooms") ; perhaps for api
           tgt-file (io/file dir "rooms.json")
-          json-str (json/write-str {:chunk our-rooms})
-
-          ]
+          json-str (json/write-str {:chunk our-rooms})]
       (util/info "Downloaded info for %s rooms\n" (count rooms))
       (util/info "%s rooms found out of %s provided via rooms.edn\n" (count our-rooms) (count our?))
       (io/make-parents tgt-file)
